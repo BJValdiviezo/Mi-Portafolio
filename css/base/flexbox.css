@@ -1,0 +1,38 @@
+
+.headerPrincipal .container{
+    display: Flex;
+    align-items: center;
+    justify-content: flex-end;
+
+
+}
+.headerPrincipal-nav{
+    display: flex;
+    justify-content: space-between;
+}
+.aboutme-title{
+	display: flex;
+}
+.myskills .container{
+    display: flex;
+    flex-direction: column;
+}
+.myskills-title{
+    justify-content: center;
+}
+.myskills-imagines{
+flex-direction: row;
+}
+.footer .container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 10px;
+    background: grey;
+}
+.footer-icons{
+	display: flex;
+    align-items: center;
+	column-gap: 25px;
+  }
