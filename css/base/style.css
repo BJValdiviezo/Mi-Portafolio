@@ -142,9 +142,23 @@ body {
 	color: black;
 	font-size: 50px;
 }
-.myskills-logo{
+.myskills h1{
+    text-align: center;
+	padding: 10px 0;
+}
+.myskills-logos{
+	width: 80%;
+	margin: 0 auto;
+	margin-bottom: 30px;
+
+}
+.myskills-logo img{
 	width: 90px;
 	height: 90px;
+	margin: 5px 10px;
+}
+.myskills-logo{
+	text-align: center;
 }
 .icon {
 	width: 60px;

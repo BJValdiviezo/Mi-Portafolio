@@ -17,11 +17,15 @@
     display: flex;
     flex-direction: column;
 }
-.myskills-title{
-    justify-content: center;
+
+.myskills-logos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
-.myskills-imagines{
-flex-direction: row;
+.myskills-logo{
+    display: flex;
+    flex-direction: column;
 }
 .footer .container{
     display: flex;
