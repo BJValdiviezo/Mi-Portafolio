@@ -28,7 +28,7 @@ body {
 	position: relative;
 	width: 100%;
 	height: 15vh;
-	margin-bottom: -7px;
+	margin-bottom: 7px;
 	/*Fix for safari gap*/
 	min-height: 25px;
 	max-height: 50px;
@@ -76,57 +76,76 @@ body {
 		transform: translate3d(85px, 0, 0);
 	}
 }
-.aboutme .container{
-	background-color: #000;
+
+.aboutme .container {
+	background: linear-gradient(to bottom, rgba(0, 172, 193, 1) 0%, rgba(17, 116, 226, 1) 100%);
 	padding: 10px;
 }
-.aboutme-title{
+
+.aboutme-title {
 	align-items: center;
 	padding: 10px 15px;
 }
-.aboutme .static-txt{
-	color:#fff;
+
+.aboutme .static-txt {
+	color: #fff;
 	font-size: 60px;
 	font-weight: 400;
 }
-.aboutme .dynamic-txts{
+
+.aboutme .dynamic-txts {
 	margin-left: 20px;
 	height: 90px;
 	line-height: 90px;
 	overflow: hidden;
 }
-.dynamic-txts li{
+
+.dynamic-txts li {
 	list-style: none;
-	color:#16f37d;
+	color: rgba(84, 58, 183, 1);
 	font-size: 60px;
 	font-weight: 500;
 	position: relative;
 	top: 0;
 	animation: slide 12s steps(4) infinite;
 }
+
 @keyframes slide {
-	100%{top: -360px;}
+	100% {
+		top: -360px;
+	}
 }
-.dynamic-txts li span{
+
+.dynamic-txts li span {
 	position: relative;
 	margin: 2px 0;
 	line-height: 90px;
 }
-.dynamic-txts li span::after{
+
+.dynamic-txts li span::after {
 	content: "";
 	position: absolute;
 	left: 0;
 	height: 110%;
 	width: 100%;
-	background: #000;
-	border-left: 2px solid #16f37d;;
+	background: linear-gradient(to bottom, rgba(0, 172, 193, 1) 0%, rgba(4, 161, 200, 1) 100%);
+	border-left: 2px solid rgba(84, 58, 183, 1);
 	animation: typing 3s steps(20) infinite;
 }
+
 @keyframes typing {
-	40%, 60%{left: calc(100% + 30px);}
-	100%{left: 0;}
+
+	40%,
+	60% {
+		left: calc(100% + 30px);
+	}
+
+	100% {
+		left: 0;
+	}
 }
-.aboutme-content{
+
+.aboutme-content {
 	font-size: 25px;
 	box-sizing: border-box;
 	width: 90%;
@@ -138,28 +157,188 @@ body {
 	border: solid 1px rgba(255, 255, 255, 0.5);
 	backdrop-filter: blur(4px);
 }
-.myskills-title{
+
+.myskills .container {
+	background: rgba(17, 116, 226, 1);
+}
+
+.myskills-title {
 	color: black;
 	font-size: 50px;
-}
-.myskills h1{
-    text-align: center;
+	text-align: center;
 	padding: 10px 0;
 }
-.myskills-logos{
+
+.myskills-logos {
 	width: 80%;
 	margin: 0 auto;
 	margin-bottom: 30px;
 
 }
-.myskills-logo img{
+
+.myskills-logo img {
 	width: 90px;
 	height: 90px;
 	margin: 5px 10px;
 }
-.myskills-logo{
+
+.myskills-logo {
 	text-align: center;
 }
+.portfolio .container{
+	background: linear-gradient(to bottom, rgba(0, 172, 193, 1) 0%, rgba(84, 58, 183, 1) 100%);
+}
+.portfolio-title {
+	color: white;
+	background: linear-gradient(to bottom, rgba(17, 116, 226, 1) 0%, rgba(0, 172, 193, 1) 100%);
+	font-size: 50px;
+	text-align: center;
+	padding: 10px 0;
+}
+
+figure {
+	position: relative;
+	width: 350px;
+	height: 250px;
+	background-color: #000;
+	overflow: hidden;
+}
+
+figure figcaption::before {
+	content: "";
+	position: absolute;
+	inset: 20px;
+	border: 2px solid #fff;
+	opacity: 0;
+	scale: 1.25;
+	transition: opacity 0.25s, scale 0.25s;
+}
+
+figure:hover figcaption::before {
+	opacity: 1;
+	scale: 1;
+}
+
+figure img {
+	position: relative;
+	display: block;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	opacity: 0.85;
+	scale: 1.15;
+	transition: opacity 0.25s, scale 0.35s;
+}
+
+figure:hover img {
+	opacity: 0.5;
+	scale: 1;
+}
+
+figure figcaption {
+	position: absolute;
+	inset: 0;
+	padding: 50px;
+	color: #fff;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	row-gap: 15px;
+	justify-content: center;
+}
+
+figure h2 {
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+figure p {
+	font-size: 14px;
+	opacity: 0;
+	translate: -25px;
+	transition: opacity 0.25s, translate 0.25s;
+}
+
+figure:hover p {
+	opacity: 1;
+	translate: 0;
+}
+
+figure nav {
+	position: relative;
+	width: 150px;
+	height: 50px;
+	padding: 0px 20px;
+	background: #34495e;
+	border-radius: 8px;
+	font-size: 0;
+	opacity: 0;
+	translate: -25px;
+	box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1);
+}
+
+figure:hover nav {
+	opacity: 1;
+	translate: 0;
+}
+
+figure nav a {
+	color: white;
+	font-size: 15px;
+	line-height: 75px;
+	display: inline-block;
+	opacity: 0;
+	text-align: center;
+	text-transform: uppercase;
+	translate: -25px;
+	transition: opacity 0.25s, translate 0.25s;
+	z-index: 1;
+}
+
+figure:hover nav a {
+	opacity: 1;
+	translate: 0;
+}
+
+figure nav .animation {
+	position: absolute;
+	height: 100%;
+	top: 0;
+	z-index: 0;
+	opacity: 0;
+	translate: -25px;
+	background: rgba(84, 58, 183, 1);
+	border-radius: 8px;
+	transition: all .5s ease 0s;
+}
+
+figure:hover nav .animation {
+	opacity: 1;
+	translate: 0;
+}
+
+figure nav a :nth-child(1) {
+	width: 75px;
+}
+
+figure nav .start,
+a:nth-child(1):hover~.animation {
+	width: 75px;
+	left: 0;
+}
+
+nav a :nth-child(2) {
+	width: 75px;
+}
+
+figure nav a:nth-child(2):hover~.animation {
+	width: 75px;
+	left: 75px;
+}
+
+
+
 .icon {
 	width: 60px;
 	height: 60px;
