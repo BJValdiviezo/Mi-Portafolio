@@ -57,3 +57,9 @@ figure nav{
     align-items: center;
 	column-gap: 25px;
   }
+  @media (max-width: 768px) {
+  .myskills-logos{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
