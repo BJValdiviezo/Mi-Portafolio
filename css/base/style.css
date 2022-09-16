@@ -22,6 +22,7 @@ body {
 
 .headerPrincipal-nav-link:hover {
 	border-bottom: 3px solid #0073e6;
+	transition: .1s;
 }
 
 .waves {
@@ -146,7 +147,11 @@ body {
 }
 
 .aboutme-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	font-size: 25px;
+	font-weight: bold;
 	box-sizing: border-box;
 	width: 90%;
 	height: auto;
@@ -158,12 +163,31 @@ body {
 	backdrop-filter: blur(4px);
 }
 
+.miCv {
+	border-radius: 4px;
+	background-color: rgba(84, 58, 183, 1);
+	flex-wrap: nowrap;
+	border: none;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: 20px;
+	padding: 10px;
+	width: 150px;
+	transition: all 0.5s;
+	cursor: pointer;
+	margin: 5px;
+}
+.miCv:hover{
+	background: rgb(112, 87, 214);
+
+}
+
 .myskills .container {
 	background: rgba(17, 116, 226, 1);
 }
 
 .myskills-title {
-	color: black;
+	color: white;
 	font-size: 50px;
 	text-align: center;
 	padding: 10px 0;
@@ -180,14 +204,23 @@ body {
 	width: 90px;
 	height: 90px;
 	margin: 5px 10px;
+	border-radius: 50%;
 }
 
 .myskills-logo {
 	text-align: center;
 }
-.portfolio .container{
+
+.myskills-logo:hover {
+	font-size: 25px;
+	transition: .3s;
+	color: rgba(84, 58, 183, 1);
+}
+
+.portfolio .container {
 	background: linear-gradient(to bottom, rgba(0, 172, 193, 1) 0%, rgba(84, 58, 183, 1) 100%);
 }
+
 .portfolio-title {
 	color: white;
 	background: linear-gradient(to bottom, rgba(17, 116, 226, 1) 0%, rgba(0, 172, 193, 1) 100%);
@@ -404,21 +437,25 @@ figure nav a:nth-child(2):hover~.animation {
 
 /*Shrinking for mobile*/
 @media (max-width: 768px) {
-	.aboutme-title{
+	.aboutme-title {
 		flex-wrap: wrap;
 	}
-	.dynamic-txts li span::after{
-		background: linear-gradient(to bottom,rgba(3, 163, 198, 1) 0%, )rgba(5, 157, 202, 1) 100%)
+
+	.dynamic-txts li span::after {
+		background: linear-gradient(to bottom, rgba(3, 163, 198, 1) 0%, rgba(5, 157, 202, 1) 100%)
 	}
+
 	.waves {
 		height: 40px;
-		min-height: 40px;	
+		min-height: 40px;
 	}
-.icon{
-	width: 40px;
-	height: 40px;
-}
-.footer-propiety{
-	font-size: 10px;
-}
+
+	.icon {
+		width: 40px;
+		height: 40px;
+	}
+
+	.footer-propiety {
+		font-size: 10px;
+	}
 }
